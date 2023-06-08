@@ -24,12 +24,14 @@ const handleUserInput = function(key) {
   if (key === 'd') {
     connection.write("Move: right");
   }
+  if (key === 'e') {
+    connection.write("Say: This was nostaglic!");
+  }
   if (key === '\u0003') {
     process.exit();
   }
 };
-  
- 
+
 module.exports = { setupInput, handleUserInput };
   
   
