@@ -11,6 +11,12 @@ const connect = function() {
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
     conn.write("Name: Asha");
+    setInterval(() => {
+    conn.write("Move: up");
+    // conn.write("Move: down");
+    // conn.write("Move: left");
+    // conn.write("Move: right");
+    }, 50);
   });
 
   conn.on("data", (data) => {
